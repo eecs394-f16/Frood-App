@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title>My Steroids App</title>
+
+  <link rel="stylesheet" href="/components/supersonic/css/supersonic.css">
+  <link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/stylesheets/application.css">
+  <link rel="import" href="/components/supersonic/components/import.html">
+
+
+  <script src="http://localhost/cordova.js"></script>
+  <script src="/components/steroids-js/steroids.js"></script>
+  <script src="/components/angular/angular.js"></script>
+  <script src="/components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/components/supersonic/supersonic.js"></script>
+  <script src="/components/webcomponentsjs/webcomponents-lite.js"></script>
+
+  <script src="/scripts/application.js"></script>
+</head>
+<body ng-app="SteroidsApplication">
+
+<div class="padding" ng-controller="IndexController">
+
+  <super-navbar>
+    <super-navbar-title>
+    Frood
+    </super-navbar-title>
+  </super-navbar>
+
+<div class = "froodBox" ng-repeat="event in foodEvents">
+  <div ng-click = "event.show = !event.show" class="row">
+      <div class="col-md-10">
+        <div class="col-md-12">
+                  {{event.name}}
+        </div>
+        <div class="col-md-12">
+                  {{event.loc}}
+        </div>
+        <div class="col-md-12">
+                  {{event.time}}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+
+        <div ng-if="event.show" class="col-xs-10 col-xs-offset-1">
+            {{event.desc}}
+        </div>
+
+      </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
