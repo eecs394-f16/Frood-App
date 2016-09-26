@@ -10,6 +10,7 @@ angular.module('SteroidsApplication', [
           loc: "The Lakefill",
           time: "Sep 30, 6:00pm",
           foodType: "BBQ",
+          icon:"images/bbq.png",
           desc: "Come join Graduate EECS for friends and food at the Lakefill",
           show: false
 
@@ -17,18 +18,20 @@ angular.module('SteroidsApplication', [
 
   $scope.testEvent2 = {
           name: "NuTango Dance Lessons",
-          loc: " Parkes Hall 034, 1841 Chicago Avenue, Evanston",
+          loc: " Parkes Hall 034",
           time: "Wed, 8:45pm",
           foodType: "Pizza",
+          icon:"images/pizza.png",
           desc: "Come on Wednesdays to meet awesome people and learn one of the most beautiful dances in the world.",
           show: false
     }
 
   $scope.testEvent3 = {
           name: "Library GO",
-          loc: " University Library, 1970 Campus Drive   ",
+          loc: " University Library",
           time: "Wed, 10:00 AM - 5:00 PM  ",
-          foodType: "Pizza & T-shirt",
+          foodType: "Pizza",
+          icon:"images/pizza.png",
           desc: "Find the Pokemon we've hidden around University Library and snap their pictures for a free T-Shirt.",
           show: false
     }
@@ -37,7 +40,8 @@ angular.module('SteroidsApplication', [
           name: "Hack Night is back",
           loc: "The Garage",
           time: "Wed, 7pm",
-          foodType: "Koi",
+          foodType: "Sushi",
+          icon:"images/sushi.png",
           desc: "Know the basics but aren't too sure on how to make your beautiful website public to the world? Come to our first Hack Night of the year to get started with web development!",
           show: false
     }
