@@ -68,9 +68,14 @@
         </div>
 
         <div class="col-md-1 col-md-offset-11">
-            <button ng-click="going = true" ng-init="going = false">
-                I'm going!
-            </button>
+            <div class="row">
+                <h3>Going: {{going}}</h3>
+            </div>
+            <div>
+                <button ng-click="going = !going" ng-init="going = false">
+                    Change RSVP
+                </button>
+            </div>
         </div>
 
       </div>
