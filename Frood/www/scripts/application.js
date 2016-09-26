@@ -6,7 +6,7 @@ angular.module('SteroidsApplication', [
 
   $scope.foodEvents = []
   $scope.testEvent1 = {
-          name: "GEECS BBQ",
+          name: "GEECS BBQ EXTRAVAGANZA",
           loc: "The Lakefill",
           time: "Sep 30, 6:00pm",
           foodType: "BBQ",
@@ -18,7 +18,7 @@ angular.module('SteroidsApplication', [
 
   $scope.testEvent2 = {
           name: "NuTango Dance Lessons",
-          loc: " Parkes Hall 034",
+          loc: "Parkes Hall 034",
           time: "Wed, 8:45pm",
           foodType: "Pizza",
           icon:"images/pizza.png",
@@ -37,7 +37,7 @@ angular.module('SteroidsApplication', [
     }
 
   $scope.testEvent4 = {
-          name: "Hack Night is back",
+          name: "Hack Night is Back",
           loc: "The Garage",
           time: "Wed, 7pm",
           foodType: "Sushi",
@@ -45,10 +45,21 @@ angular.module('SteroidsApplication', [
           desc: "Know the basics but aren't too sure on how to make your beautiful website public to the world? Come to our first Hack Night of the year to get started with web development!",
           show: false
     }
+  $scope.testEvent5 = {
+          name: "Boeing Info Session",
+          loc: "Tech LR2",
+          time: "Thurs, 7:30pm",
+          foodType: "Chinese",
+          icon:"images/chinese.png",
+          desc: "Interested in a career at Boeing? Come check us out at our only Northwestern Info Session! Stop by to meet some of our team and some free Joyees!",
+          show: false
+    }
   $scope.foodEvents.push($scope.testEvent2)
   $scope.foodEvents.push($scope.testEvent1)
-  $scope.foodEvents.push($scope.testEvent3)
   $scope.foodEvents.push($scope.testEvent4)
+  $scope.foodEvents.push($scope.testEvent3)
+  $scope.foodEvents.push($scope.testEvent5)
+
 
 
 });

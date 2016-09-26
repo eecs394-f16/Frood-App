@@ -11,7 +11,8 @@ navigation-bar {
 navigation-bar title {
   color: #ffffff;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 600
+
 }
 
 navigation-bar button, navigation-bar back-bar-button {

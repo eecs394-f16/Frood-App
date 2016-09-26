@@ -25,9 +25,9 @@
 
 <div class="padding" ng-controller="IndexController">
 
-  <super-navbar style="background-color: #8900db">
+  <super-navbar style="background-color: #8900db;">
     <super-navbar-title>
-    Frood
+      Frood
     </super-navbar-title>
   </super-navbar>
 
@@ -50,18 +50,23 @@
         <div class = "col-md-12">
           <img ng-src="{{event.icon}}" style="height:60px">
         </div>
-        <div class = "col-md-12">
+        <div style="text-align: center" class = "col-md-12">
           <h1>{{event.foodType}}</h1>
         </div>
       </div>
     </div>
 
-    <div class="row">
+    <div ng-if="event.show" class="row">
       <div class="col-xs-12">
 
-        <div ng-if="event.show" class="col-xs-10 col-xs-offset-1">
+        <div class="col-xs-10 col-xs-offset-1">
             <p>{{event.desc}}</p>
         </div>
+
+        <div class="col-xs-1 col-xs-offset-11">
+          <img src="images/fbLogo.png" style="height: 20px">
+        </div>
+
 
       </div>
     </div>
