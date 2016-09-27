@@ -13,7 +13,7 @@ angular.module('SteroidsApplication', [
           icon:"images/bbq.png",
           desc: "Come join Graduate EECS for friends and food at the Lakefill",
           show: false,
-          signups: 0
+          attending: 52
       }
 
   $scope.testEvent2 = {
@@ -24,7 +24,7 @@ angular.module('SteroidsApplication', [
           icon:"images/pizza.png",
           desc: "Come on Wednesdays to meet awesome people and learn one of the most beautiful dances in the world.",
           show: false,
-          signups: 0
+          attending: 37
     }
 
   $scope.testEvent3 = {
@@ -35,7 +35,7 @@ angular.module('SteroidsApplication', [
           icon:"images/pizza.png",
           desc: "Find the Pokemon we've hidden around University Library and snap their pictures for a free T-Shirt.",
           show: false,
-          signups: 0
+          attending: 65
     }
 
   $scope.testEvent4 = {
@@ -46,7 +46,7 @@ angular.module('SteroidsApplication', [
           icon:"images/sushi.png",
           desc: "Know the basics but aren't too sure on how to make your beautiful website public to the world? Come to our first Hack Night of the year to get started with web development!",
           show: false,
-          signups: 0
+          attending: 41
     }
   $scope.testEvent5 = {
           name: "Boeing Info Session",
@@ -56,7 +56,7 @@ angular.module('SteroidsApplication', [
           icon:"images/chinese.png",
           desc: "Interested in a career at Boeing? Come check us out at our only Northwestern Info Session! Stop by to meet some of our team and some free Joyees!",
           show: false,
-          signups: 0
+          attending: 48
     }
   $scope.foodEvents.push($scope.testEvent2)
   $scope.foodEvents.push($scope.testEvent1)
