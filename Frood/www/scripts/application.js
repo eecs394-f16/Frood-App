@@ -19,7 +19,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent2 = {
           name: "NuTango Dance Lessons",
           loc: "Parkes Hall 034",
-          time: "Wed, 8:45pm",
+          time: "Sep 29, 8:45pm",
           foodType: "Pizza",
           icon:"images/pizza.png",
           desc: "Come on Wednesdays to meet awesome people and learn one of the most beautiful dances in the world.",
@@ -30,7 +30,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent3 = {
           name: "Library GO",
           loc: " University Library",
-          time: "Wed, 10:00 AM - 5:00 PM  ",
+          time: "Oct 3, 10:00 AM - 5:00 PM  ",
           foodType: "Pizza",
           icon:"images/pizza.png",
           desc: "Find the Pokemon we've hidden around University Library and snap their pictures for a free T-Shirt.",
@@ -41,7 +41,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent4 = {
           name: "Hack Night is Back",
           loc: "The Garage",
-          time: "Wed, 7pm",
+          time: "Oct 1, 7pm",
           foodType: "Sushi",
           icon:"images/sushi.png",
           desc: "Know the basics but aren't too sure on how to make your beautiful website public to the world? Come to our first Hack Night of the year to get started with web development!",
@@ -51,7 +51,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent5 = {
           name: "Boeing Info Session",
           loc: "Tech LR2",
-          time: "Thurs, 7:30pm",
+          time: "Sep 29, 7:30pm",
           foodType: "Chinese",
           icon:"images/chinese.png",
           desc: "Interested in a career at Boeing? Come check us out at our only Northwestern Info Session! Stop by to meet some of our team and some free Joyees!",
