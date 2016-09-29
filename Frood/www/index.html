@@ -33,7 +33,16 @@
 
 <div class = "froodBox" ng-repeat="event in foodEvents">
   <div ng-click = "event.show = !event.show" class="row">
-      <div class="col-md-10">
+      <div class="col-md-1">
+        <div class = "col-md-12">
+          <img ng-src="{{event.icon}}" style="height:60px">
+        </div>
+        <div style="text-align: center" class = "col-md-12">
+          <h1>{{event.foodType}}</h1>
+        </div>
+      </div>
+
+      <div class="col-md-11">
         <div class="col-md-12">
                   <h1>{{event.name}}</h1>
         </div>
@@ -46,14 +55,6 @@
 
       </div>
 
-      <div class="col-md-2">
-        <div class = "col-md-12">
-          <img ng-src="{{event.icon}}" style="height:60px">
-        </div>
-        <div style="text-align: center" class = "col-md-12">
-          <h1>{{event.foodType}}</h1>
-        </div>
-      </div>
     </div>
 
     <div ng-if="event.show" class="row">
@@ -63,9 +64,9 @@
             <p>{{event.desc}}</p>
         </div>
 
-        <!-- <div class="col-md-1 col-md-offset-11">
-          <img src="images/fbLogo.png" style="height: 20px">
-        </div> !-->
+        <div class="col-md-1 col-md-offset-11">
+          <a ng-click="openURL(event.fbUrl)"><img src="images/fbLogo.png" style="height: 20px"></a>
+        </div>
 
         <div class="col-md-1 col-md-offset-11">
             <div class="row">

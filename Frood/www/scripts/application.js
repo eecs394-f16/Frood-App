@@ -12,6 +12,7 @@ angular.module('SteroidsApplication', [
           foodType: "BBQ",
           icon:"images/bbq.png",
           desc: "Come join Graduate EECS for friends and food at the Lakefill",
+          fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
           attending: 52
       }
@@ -23,6 +24,7 @@ angular.module('SteroidsApplication', [
           foodType: "Pizza",
           icon:"images/pizza.png",
           desc: "Come on Wednesdays to meet awesome people and learn one of the most beautiful dances in the world.",
+          fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
           attending: 37
     }
@@ -34,6 +36,7 @@ angular.module('SteroidsApplication', [
           foodType: "Pizza",
           icon:"images/pizza.png",
           desc: "Find the Pokemon we've hidden around University Library and snap their pictures for a free T-Shirt.",
+          fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
           attending: 65
     }
@@ -45,6 +48,7 @@ angular.module('SteroidsApplication', [
           foodType: "Sushi",
           icon:"images/sushi.png",
           desc: "Know the basics but aren't too sure on how to make your beautiful website public to the world? Come to our first Hack Night of the year to get started with web development!",
+          fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
           attending: 41
     }
@@ -55,6 +59,7 @@ angular.module('SteroidsApplication', [
           foodType: "Chinese",
           icon:"images/chinese.png",
           desc: "Interested in a career at Boeing? Come check us out at our only Northwestern Info Session! Stop by to meet some of our team and some free Joyees!",
+          fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
           attending: 48
     }
@@ -63,6 +68,10 @@ angular.module('SteroidsApplication', [
   $scope.foodEvents.push($scope.testEvent1)
   $scope.foodEvents.push($scope.testEvent2)
   $scope.foodEvents.push($scope.testEvent5)
+
+  $scope.openURL = function(url) {
+    supersonic.app.openURL(url)
+  }
 
 
 
