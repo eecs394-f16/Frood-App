@@ -58,10 +58,10 @@ angular.module('SteroidsApplication', [
           show: false,
           attending: 48
     }
-  $scope.foodEvents.push($scope.testEvent2)
-  $scope.foodEvents.push($scope.testEvent1)
-  $scope.foodEvents.push($scope.testEvent4)
   $scope.foodEvents.push($scope.testEvent3)
+  $scope.foodEvents.push($scope.testEvent4)
+  $scope.foodEvents.push($scope.testEvent1)
+  $scope.foodEvents.push($scope.testEvent2)
   $scope.foodEvents.push($scope.testEvent5)
 
 
