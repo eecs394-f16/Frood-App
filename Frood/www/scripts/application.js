@@ -19,11 +19,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent2 = {
           name: "NuTango Dance Lessons",
           loc: "Parkes Hall 034",
-<<<<<<< HEAD
           time: "Oct 1, 8:45 p.m.",
-=======
-          time: "Sep 29, 8:45pm",
->>>>>>> 88e36bf632f39215a8d1f26b109a78a900152745
           foodType: "Pizza",
           icon:"images/pizza.png",
           desc: "Come on Wednesdays to meet awesome people and learn one of the most beautiful dances in the world.",
@@ -34,11 +30,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent3 = {
           name: "Library GO",
           loc: " University Library",
-<<<<<<< HEAD
           time: "Sep 28, 10:00 a.m.",
-=======
-          time: "Oct 3, 10:00 AM - 5:00 PM  ",
->>>>>>> 88e36bf632f39215a8d1f26b109a78a900152745
           foodType: "Pizza",
           icon:"images/pizza.png",
           desc: "Find the Pokemon we've hidden around University Library and snap their pictures for a free T-Shirt.",
@@ -49,11 +41,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent4 = {
           name: "Hack Night is Back",
           loc: "The Garage",
-<<<<<<< HEAD
           time: "Sep 28, 7:00 p.m.",
-=======
-          time: "Oct 1, 7pm",
->>>>>>> 88e36bf632f39215a8d1f26b109a78a900152745
           foodType: "Sushi",
           icon:"images/sushi.png",
           desc: "Know the basics but aren't too sure on how to make your beautiful website public to the world? Come to our first Hack Night of the year to get started with web development!",
@@ -63,11 +51,7 @@ angular.module('SteroidsApplication', [
   $scope.testEvent5 = {
           name: "Boeing Info Session",
           loc: "Tech LR2",
-<<<<<<< HEAD
           time: "Oct 10, 7:30 p.m.",
-=======
-          time: "Sep 29, 7:30pm",
->>>>>>> 88e36bf632f39215a8d1f26b109a78a900152745
           foodType: "Chinese",
           icon:"images/chinese.png",
           desc: "Interested in a career at Boeing? Come check us out at our only Northwestern Info Session! Stop by to meet some of our team and some free Joyees!",
