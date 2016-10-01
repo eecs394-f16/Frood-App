@@ -73,6 +73,16 @@ angular.module('SteroidsApplication', [
     supersonic.app.openURL(url)
   }
 
-
+  $scope.changeViewMode = function(ev) {
+    if (ev.show) {
+      ev.show = false;
+    }
+    else {
+      for (var i = 0; i < $scope.foodEvents.length; i++) {
+        $scope.foodEvents[i].show = false;
+      }
+      ev.show = true;
+    }
+  }
 
 });

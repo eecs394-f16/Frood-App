@@ -32,7 +32,7 @@
   </super-navbar>
 
 <div class = "froodBox" ng-repeat="event in foodEvents">
-  <div ng-click = "event.show = !event.show" class="row">
+  <div ng-click = "changeViewMode(event);" class="row">
       <div class="col-md-1">
         <div class = "col-md-12">
           <img ng-src="{{event.icon}}" style="height:60px">
@@ -57,10 +57,10 @@
 
     </div>
 
-    <div ng-if="event.show" class="row">
+    <div ng-show="event.show" class="row">
       <div class="col-md-12">
 
-        <div ng-click = "event.show = !event.show" class="col-md-10 col-md-offset-1">
+        <div ng-click = "changeViewMode(event)" class="col-md-10 col-md-offset-1">
             <p>{{event.desc}}</p>
         </div>
 
