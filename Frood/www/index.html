@@ -57,6 +57,12 @@
 
     </div>
 
+    <div class="row">
+        <div class="col-md-2" ng-click="event.show = !event.show">
+            <img ng-src="images/down.png" ng-class="event.show ? 'rotate180' : 'rotate0'" style="height: 15px; position:relative; top:5px; left:300px" />
+        </div>
+    </div>
+
     <div ng-show="event.show" class="row">
       <div class="col-md-12">
 

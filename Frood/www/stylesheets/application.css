@@ -4,6 +4,14 @@
   padding: 10px;
   margin-bottom: 20px
 }
+.rotate180 {
+  transform: rotate(-180deg);
+  transition: .2s;
+}
+
+.rotate0 {
+  transition: .2s;
+}
 h1{
   font-size:18px;
 }
