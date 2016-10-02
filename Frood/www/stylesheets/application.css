@@ -4,6 +4,12 @@
   padding: 10px;
   margin-bottom: 20px
 }
+.froodBoxExtend {
+  border: 2px solid;
+  border-color: #5cb85c;
+  padding: 10px;
+  margin-bottom: 20px
+}
 .rotate180 {
   transform: rotate(-180deg);
   transition: .2s;

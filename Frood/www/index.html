@@ -31,7 +31,7 @@
     </super-navbar-title>
   </super-navbar>
 
-<div class = "froodBox" ng-repeat="event in foodEvents">
+<div class = "froodBox" ng-class = "{'froodBoxExtend':event.show}" ng-repeat="event in foodEvents">
   <div ng-click = "changeViewMode(event);" class="row">
       <div class="col-md-1">
         <div class = "col-md-12">
