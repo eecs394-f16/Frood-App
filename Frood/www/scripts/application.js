@@ -10,7 +10,8 @@ angular.module('SteroidsApplication', [
           loc: "The Lakefill",
           time: "Sep 30, 6:00 p.m.",
           foodType: "BBQ",
-          icon:"images/bbq.png",
+          icon: "images/bbq.png",
+          arrow: "down.png",
           desc: "Come join Graduate EECS for friends and food at the Lakefill",
           fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
@@ -22,7 +23,8 @@ angular.module('SteroidsApplication', [
           loc: "Parkes Hall 034",
           time: "Oct 1, 8:45 p.m.",
           foodType: "Pizza",
-          icon:"images/pizza.png",
+          icon: "images/pizza.png",
+          arrow: "down.png",
           desc: "Come on Wednesdays to meet awesome people and learn one of the most beautiful dances in the world.",
           fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
@@ -34,7 +36,8 @@ angular.module('SteroidsApplication', [
           loc: " University Library",
           time: "Sep 28, 10:00 a.m.",
           foodType: "Pizza",
-          icon:"images/pizza.png",
+          icon: "images/pizza.png",
+          arrow: "down.png",
           desc: "Find the Pokemon we've hidden around University Library and snap their pictures for a free T-Shirt.",
           fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
@@ -46,7 +49,8 @@ angular.module('SteroidsApplication', [
           loc: "The Garage",
           time: "Sep 28, 7:00 p.m.",
           foodType: "Sushi",
-          icon:"images/sushi.png",
+          icon: "images/sushi.png",
+          arrow: "down.png",
           desc: "Know the basics but aren't too sure on how to make your beautiful website public to the world? Come to our first Hack Night of the year to get started with web development!",
           fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
@@ -57,7 +61,8 @@ angular.module('SteroidsApplication', [
           loc: "Tech LR2",
           time: "Oct 10, 7:30 p.m.",
           foodType: "Chinese",
-          icon:"images/chinese.png",
+          icon: "images/chinese.png",
+          arrow: "down.png",
           desc: "Interested in a career at Boeing? Come check us out at our only Northwestern Info Session! Stop by to meet some of our team and some free Joyees!",
           fbUrl: "https://www.facebook.com/events/1676750769228818/",
           show: false,
@@ -85,4 +90,11 @@ angular.module('SteroidsApplication', [
     }
   }
 
+  $scope.changeArrowColor = function (ev) {
+      if (ev.arrow == "down.png") {
+          ev.arrow = "down2.png";
+      } else {
+          ev.arrow = "down.png";
+      }
+  }
 });

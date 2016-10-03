@@ -84,7 +84,7 @@
             </div>
 
             <div>
-                <button ng-click="going = !going; (going)?event.attending = event.attending + 1:event.attending = event.attending - 1;" ng-init="going = false">
+                <button ng-click="going = !going; (going)?event.attending = event.attending + 1:event.attending = event.attending - 1; changeArrowColor(event)" ng-init="going = false">
                     Change RSVP
                 </button>
             </div>
@@ -92,13 +92,12 @@
 
       </div>
     </div>
+
     <div class="row">
         <div class="col-md-2" ng-click="event.show = !event.show">
-            <img ng-src="images/down.png" ng-class="event.show ? 'rotate180' : 'rotate0'" style="height: 15px; position:relative; top:5px; left:300px" />
+            <img ng-src="images/{{event.arrow}}" ng-class="event.show ? 'rotate180' : 'rotate0'" style="height: 15px; position:relative; top:5px; left:300px" />
         </div>
     </div>
-
-
 
 </div>
 
