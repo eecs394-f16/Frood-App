@@ -4,6 +4,10 @@
   padding: 10px;
   margin-bottom: 20px
 }
+.froodBoxTest {
+  border: 2px solid;
+  border-color: #8900db;
+}
 .froodBoxExtend {
   border: 2px solid;
   border-color: #5cb85c;
@@ -19,8 +23,36 @@
   transition: .2s;
 }
 h1{
-  font-size:18px;
+  padding: 0px;
+  margin: 0px auto;
+  font-size:4.5vw;
+}
+h2{
+  padding: 0px;
+  text-align: center;
+  margin: 0px auto;
+  font-size:5vw;
 }
 h3{
-  font-size:14px;
+  padding: 0px;
+  margin: 0px auto;
+  font-size:4vw;
+}
+@media (max-device-width: 640px){
+  h1{
+    padding: 0px;
+    margin: 0px auto;
+    font-size:4.3vw;
+  }
+  h2{
+    padding: 0px;
+    text-align: center;
+    margin: 0px auto;
+    font-size:4vw;
+  }
+  h3{
+    padding: 0px;
+    margin: 0px auto;
+    font-size:3.5vw;
+  }
 }

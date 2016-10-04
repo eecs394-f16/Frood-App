@@ -32,24 +32,22 @@
   </super-navbar>
 
 <div class = "froodBox" ng-class = "{'froodBoxExtend':going}" ng-repeat="event in foodEvents">
-  <div ng-click = "changeViewMode(event);" class="row">
-      <div class="col-md-1">
-        <div class = "col-md-12">
-          <img ng-src="{{event.icon}}" style="height:60px">
+  <div ng-click = "changeViewMode(event);" class="row" style="width:100%">
+      <div class="col-xs-4">
+        <div class = "col-xs-12">
+          <img ng-src="{{event.icon}}" class="img-responsive">
         </div>
-        <div style="text-align: center" class = "col-md-12">
-          <h1>{{event.foodType}}</h1>
-        </div>
+          <h2>{{event.foodType}}<h2>
       </div>
 
-      <div class="col-md-11">
-        <div class="col-md-12">
+      <div class="col-xs-8">
+        <div class="col-xs-12">
                   <h1>{{event.name}}</h1>
         </div>
-        <div class="col-md-12">
+        <div class="col-xs-12">
                   <h3>{{event.loc}}</h3>
         </div>
-        <div class="col-md-12">
+        <div class="col-xs-12">
                   <h3>{{event.time}}<h3>
         </div>
 
@@ -59,34 +57,35 @@
 
 
     <div ng-show="event.show" class="row">
-      <div class="col-md-12">
+      <div class="col-xs-12">
 
-        <div ng-click = "changeViewMode(event)" class="col-md-10 col-md-offset-1">
+        <div ng-click = "changeViewMode(event)" class="col-xs-12">
             <p>{{event.desc}}</p>
         </div>
 
-        <div class="col-md-1 col-md-offset-11">
-          <a ng-click="openURL(event.fbUrl)"><img src="images/fbLogo.png" style="height: 20px"></a>
-        </div>
 
-        <div class="col-md-1 col-md-offset-11">
-            <div class="row">
-              <div class="col-md-6">
+        <div class="col-xs-12">
+              <div class="col-xs-6">
                   <h3>Attending: {{event.attending}}</h3>
               </div>
 
-                <div ng-show="going" class="col-md-6">
+                <div ng-show="going" class="col-xs-6">
                     <h3>Going: Yes!</h3>
                 </div>
-                <div ng-show="!going" class="col-md-6">
+                <div ng-show="!going" class="col-xs-6">
                     <h3>Going: No</h3>
                 </div>
-            </div>
 
-            <div>
+
+            <div class="row" style="margin-top:10px">
+              <div class="col-xs-10">
                 <button ng-click="going = !going; (going)?event.attending = event.attending + 1:event.attending = event.attending - 1; changeArrowColor(event)" ng-init="going = false">
                     Change RSVP
                 </button>
+              </div>
+              <div class="col-xs-1 col-xs-offset-1">
+                <a ng-click="openURL(event.fbUrl)"><img src="images/fbLogo.png" style="height: 20px"></a>
+              </div>
             </div>
         </div>
 
@@ -94,8 +93,8 @@
     </div>
 
     <div class="row">
-        <div class="col-md-2" ng-click="changeViewMode(event)">
-            <img ng-src="images/{{event.arrow}}" ng-class="event.show ? 'rotate180' : 'rotate0'" style="height: 15px; position:relative; top:5px; left:300px" />
+        <div class="col-xs-1 col-xs-offset-11" ng-click="changeViewMode(event)">
+            <img ng-src="images/{{event.arrow}}" ng-class="event.show ? 'rotate180' : 'rotate0'" style="height: 15px;" />
         </div>
     </div>
 
