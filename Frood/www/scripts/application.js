@@ -6,6 +6,7 @@ angular.module('SteroidsApplication', [
   $scope.newEvent = false;
   $scope.eventToAdd = {};
   $scope.foodEvents = [];
+  $scope.foodList = ["pizza", "chinese", "bbq"]
   $scope.testEvent1 = {
           name: "GEECS BBQ EXTRAVAGANZA",
           loc: "The Lakefill",
