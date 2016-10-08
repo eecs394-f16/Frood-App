@@ -14,13 +14,15 @@
 
   <script src="http://localhost/cordova.js"></script>
   <script src="/components/steroids-js/steroids.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+  <script src="/components/jquery/dist/jquery.min.js"></script>
   <script src="/components/angular/angular.js"></script>
   <script src="/components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/components/supersonic/supersonic.js"></script>
   <script src="/components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
 
 
-  <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
   <script>
   // Initialize Firebase
   var config = {
@@ -44,7 +46,7 @@
       Frood
     </super-navbar-title>
   </super-navbar>
-
+<div>{{dBEvents}}</div>
 <div class = "froodBox" ng-class = "{'froodBoxExtend':going}" ng-repeat="event in foodEvents">
   <div ng-click = "changeViewMode(event);" class="row" style="width:100%">
       <div class="col-xs-4">
