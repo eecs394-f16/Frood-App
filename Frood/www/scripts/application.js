@@ -4,10 +4,19 @@ angular.module('SteroidsApplication', [
 .controller('IndexController', function($scope, supersonic, $firebaseObject) {
 
   var dB = firebase.database().ref().child("events")
+  $scope.foodEvents = [];
   //dB.push(newEvent) This is how to push
-  $scope.foodEvents = []
-  
 
+  /*dB.once("value", function(snapshot) {
+  // The callback function will get called twice, once for "fred" and once for "barney"
+  snapshot.forEach(function(childSnapshot) {
+    // key will be "fred" the first time and "barney" the second time
+    // childData will be the actual contents of the child
+    alert("Hello! I am an alert box!!");
+    $scope.foodEvents.push(childSnapshot.val());
+  });
+});
+*/
 
   $scope.openURL = function(url) {
     supersonic.app.openURL(url)

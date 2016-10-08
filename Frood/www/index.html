@@ -46,7 +46,7 @@
       Frood
     </super-navbar-title>
   </super-navbar>
-<div>{{dBEvents}}</div>
+
 <div class = "froodBox" ng-class = "{'froodBoxExtend':going}" ng-repeat="event in foodEvents">
   <div ng-click = "changeViewMode(event);" class="row" style="width:100%">
       <div class="col-xs-4">
@@ -115,6 +115,6 @@
     </div>
 
 </div>
-
+<div>{{foodEvents}}</div>
 </body>
 </html>
