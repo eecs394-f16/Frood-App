@@ -6,7 +6,7 @@ angular.module('SteroidsApplication', [
   $scope.newEvent = false;
   $scope.eventToAdd = {};
   $scope.foodEvents = [];
-  $scope.foodList = ["pizza", "chinese", "bbq"]
+  $scope.foodList = ["Pizza", "Chinese", "BBQ", "Sushi"];
   $scope.testEvent1 = {
           name: "GEECS BBQ EXTRAVAGANZA",
           loc: "The Lakefill",
@@ -97,6 +97,13 @@ angular.module('SteroidsApplication', [
           ev.arrow = "down2.png";
       } else {
           ev.arrow = "down.png";
+      }
+  }
+
+  $scope.addEventToDB = function (ev) {
+      if (ev.name == undefined || ev.loc == undefined || ev.start == undefined || ev.end == undefined ||
+          ev.foodType == undefined || ev.fbUrl == undefined || ev.desc == undefined) {
+          
       }
   }
 });
