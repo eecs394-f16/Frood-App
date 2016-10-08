@@ -19,6 +19,17 @@
   <script src="/components/supersonic/supersonic.js"></script>
   <script src="/components/webcomponentsjs/webcomponents-lite.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+  <script>
+  var config = {
+    apiKey: "<API_KEY>",
+    authDomain: "<PROJECT_ID>.firebaseapp.com",
+    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+    storageBucket: "<BUCKET>.appspot.com",
+  };
+  firebase.initializeApp(config);
+  </script>
+
   <script src="/scripts/application.js"></script>
 </head>
 <body ng-app="SteroidsApplication">
