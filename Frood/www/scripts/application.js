@@ -3,8 +3,9 @@ angular.module('SteroidsApplication', [
 ])
 .controller('IndexController', function($scope, supersonic) {
 
-
-  $scope.foodEvents = []
+  $scope.newEvent = false;
+  $scope.eventToAdd = {};
+  $scope.foodEvents = [];
   $scope.testEvent1 = {
           name: "GEECS BBQ EXTRAVAGANZA",
           loc: "The Lakefill",

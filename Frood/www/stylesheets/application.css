@@ -4,6 +4,12 @@
   padding: 10px;
   margin-bottom: 20px
 }
+.froodBoxAdd {
+  border: 2px solid;
+  border-color: orange;
+  padding: 10px;
+  margin-bottom: 20px
+}
 .froodBoxTest {
   border: 2px solid;
   border-color: #8900db;
