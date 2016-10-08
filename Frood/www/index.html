@@ -43,8 +43,9 @@
     <super-navbar-title>
       Frood
     </super-navbar-title>
+    <super-navbar-button ng-click="newEvent = true" side= "right"><button>Add Event</button></supernavbar-button>
   </super-navbar>
-
+<div class = "froodBox" ng-show="newEvent"></div>
 <div class = "froodBox" ng-class = "{'froodBoxExtend':going}" ng-repeat="event in foodEvents">
   <div ng-click = "changeViewMode(event);" class="row" style="width:100%">
       <div class="col-xs-4">
