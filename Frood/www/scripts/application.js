@@ -3,6 +3,7 @@ angular.module('SteroidsApplication', [
 ])
 .controller('IndexController', function($scope, supersonic) {
 
+  var dB = firebase.database().ref().child("events")
   $scope.newEvent = false;
   $scope.eventToAdd = {};
   $scope.foodEvents = [];
@@ -101,9 +102,12 @@ angular.module('SteroidsApplication', [
   }
 
   $scope.addEventToDB = function (ev) {
-      if (ev.name == undefined || ev.loc == undefined || ev.start == undefined || ev.end == undefined ||
-          ev.foodType == undefined || ev.fbUrl == undefined || ev.desc == undefined) {
-          
-      }
+    ev.show = false;
+    ev.arrow = "down.png";
+    ev.attending = Math.random()*(49)+1;
+    ev.icon = "images/" + ev.foodType.toLowerCase()+ ".png"
+    dB.push(ev)
+    $scope.eventToAdd = {};
+    $scope.newEvent = false;
   }
 });
