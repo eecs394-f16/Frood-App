@@ -93,6 +93,11 @@ angular.module('SteroidsApplication', [
     }
   }
 
+  $scope.SucessWord = 'Thanks for submitting your Frood Event!';
+  $scope.successSubmitt = function(SucessWord) {
+    alert(SucessWord);
+  }
+
   $scope.changeArrowColor = function (ev) {
       if (ev.arrow == "down.png") {
           ev.arrow = "down2.png";
@@ -120,4 +125,7 @@ angular.module('SteroidsApplication', [
     $scope.eventToAdd = {};
     $scope.newEvent = false;
   }
+
+
+
 });
