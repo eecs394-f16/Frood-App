@@ -118,7 +118,7 @@
             <div ng-show="event.show" class="row">
                 <div class="col-xs-12">
 
-                    <div ng-click="changeViewMode(event)" class="col-xs-12">
+                    <div ng-click="changeViewMode(event)" style="margin-top: 30px; margin-bottom: 20px;" class="col-xs-12">
                         <p>{{event.desc}}</p>
                     </div>
 
@@ -136,7 +136,7 @@
                         </div>
 
 
-                        <div class="row" style="margin-top:10px">
+                        <div class="row" style="margin-top:20px">
                             <div class="col-xs-10">
                                 <button ng-click="going = !going; (going)?event.attending = event.attending + 1:event.attending = event.attending - 1; changeArrowColor(event)" ng-init="going = false">
                                     Change RSVP
