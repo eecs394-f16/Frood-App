@@ -3,18 +3,16 @@ angular.module('SteroidsApplication', [
 ])
 .controller('IndexController', function($scope, supersonic) {
   $scope.foodEvents = [];
+
   var dB = firebase.database().ref().child("events")
-  console.log(dB);
+
   dB.once("value", function(snapshot) {
-  // The callback function will get called twice, once for "fred" and once for "barney"
-  snapshot.forEach(function(childSnapshot) {
-    // key will be "fred" the first time and "barney" the second time
-    // childData will be the actual contents of the child
-    console.log(childSnapshot.val())
-    $scope.foodEvents.push(childSnapshot.val());
-    $scope.$apply();
+    snapshot.forEach(function(childSnapshot) {
+      $scope.foodEvents.push(childSnapshot.val());
+      $scope.$apply();
+    });
   });
-});
+
   $scope.newEvent = false;
   $scope.eventToAdd = {};
 
@@ -37,8 +35,8 @@ angular.module('SteroidsApplication', [
   }
 
   $scope.SucessWord = 'Thanks for submitting your Frood Event!';
-  $scope.successSubmitt = function(SucessWord) {
-    alert(SucessWord);
+  $scope.successSubmit = function() {
+    alert($scope.SucessWord);
   }
 
   $scope.changeArrowColor = function (ev) {
@@ -66,6 +64,7 @@ angular.module('SteroidsApplication', [
     delete ev.end;
     dB.push(ev);
     $scope.foodEvents.push(ev);
+    $scope.successSubmit();
     $scope.eventToAdd = {};
     $scope.newEvent = false;
   }
