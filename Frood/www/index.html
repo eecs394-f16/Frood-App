@@ -50,14 +50,14 @@
         </super-navbar>
         <div class="dropdown">
           <div ng-show="filterMenu" class="dropdown-content">
-            <button ng-click="sortingBy = 'foodType';filterMenu = false">Food</button>
-            <button ng-click="sortingBy = 'time';filterMenu = false; reverse = false">Time: Starting Soon</button>
-            <button ng-click="sortingBy = 'time';filterMenu = false; reverse = true">Time: Not So Soon</button>
-            <button ng-click="sortingBy = 'attending';filterMenu = false; reverse=true">Most Popular</button>
-            <button ng-click="sortingBy = 'attending';filterMenu = false; reverse=false">Least Popular</button>
+            <button class="btn-info" ng-click="sortingBy = 'foodType';filterMenu = false">Food</button>
+            <button class="btn-info" ng-click="sortingBy = 'time';filterMenu = false; reverse = false">Time: Starting Soon</button>
+            <button class="btn-info" ng-click="sortingBy = 'time';filterMenu = false; reverse = true">Time: Not So Soon</button>
+            <button class="btn-info" ng-click="sortingBy = 'attending';filterMenu = false; reverse=true">Most Popular</button>
+            <button class="btn-info" ng-click="sortingBy = 'attending';filterMenu = false; reverse=false">Least Popular</button>
           </div>
         </div>
-        
+
         <div class="froodBoxAdd" ng-show="newEvent">
 
             <form>
