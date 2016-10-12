@@ -17,6 +17,7 @@
 .froodBoxExtend {
   border: 2px solid;
   border-color: #5cb85c;
+  background : #bad1d4;
   padding: 10px;
   margin-bottom: 20px
 }
