@@ -40,16 +40,17 @@
     <div class="padding" ng-controller="IndexController">
 
         <super-navbar style="background-color: #8900db;">
-          <super-navbar-button ng-click="filterMenu = true" side="left">
-              <button onclick="filterMenu = !filterMenu" class="dropbtn">Filter</button>
+          <super-navbar-button ng-click="filterMenu = !filterMenu" side="left">
+              <button class="dropbtn">Filter</button>
           </super-navbar-button>
             <super-navbar-title>
                 Frood
             </super-navbar-title>
             <super-navbar-button ng-click="newEvent = true" side="right"><button>Add Event</button></super-navbar-button>
         </super-navbar>
+        
         <div class="dropdown">
-          <div ng-show="filterMenu" class="dropdown-content">
+          <div ng-show="filterMenu" class="dropdown-content show">
             <button class="btn-info" ng-click="sortingBy = 'foodType';filterMenu = false">Food</button>
             <button class="btn-info" ng-click="sortingBy = 'time';filterMenu = false; reverse = false">Time: Starting Soon</button>
             <button class="btn-info" ng-click="sortingBy = 'time';filterMenu = false; reverse = true">Time: Not So Soon</button>

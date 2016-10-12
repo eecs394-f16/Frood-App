@@ -15,6 +15,7 @@ angular.module('SteroidsApplication', [
 
   $scope.newEvent = false;
   $scope.filterMenu = false;
+  $scope.reverse = false;
   $scope.eventToAdd = {};
   $scope.sortingBy = 'foodType'
 
