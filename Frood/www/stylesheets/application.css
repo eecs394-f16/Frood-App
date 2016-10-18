@@ -58,8 +58,13 @@
   display: block;
 }
 .btn-info{
-  background-color: rgba(102,51,153, 0.85);;
+  background-color: rgba(137,0,219, 1);
   border-color: black;
+}
+.btn-info.active{
+  background-color: rgba(137,0,219, .5) !important;
+  border-color: black !important;
+  color: white;
 }
 
 h1{

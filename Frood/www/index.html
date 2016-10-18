@@ -51,11 +51,11 @@
 
         <div class="dropdown">
           <div ng-show="filterMenu" class="dropdown-content show">
-            <button class="btn-info btn-dropdown" ng-class="{active: sortingBy=='foodType'}" ng-click="sortingBy = 'foodType';filterMenu = false">Food</button>
-            <button class="btn-info btn-dropdown" ng-click="sortingBy = 'time';filterMenu = false; reverse = false">Time: Starting Soon</button>
-            <button class="btn-info btn-dropdown" ng-click="sortingBy = 'time';filterMenu = false; reverse = true">Time: Not So Soon</button>
-            <button class="btn-info btn-dropdown" ng-click="sortingBy = 'attending';filterMenu = false; reverse=true">Most Popular</button>
-            <button class="btn-info btn-dropdown" ng-click="sortingBy = 'attending';filterMenu = false; reverse=false">Least Popular</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='soon'}" ng-click="sortingBy = 'time';filterMenu = false; reverse = false; sortName ='soon'">Time: Starting Soon</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='later'}" ng-click="sortingBy = 'time';filterMenu = false; reverse = true; sortName = 'later'">Time: Starting Latest</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortingBy=='foodType'}" ng-click="sortingBy = 'foodType';filterMenu = false; sortName='foodType'">Food Type</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='popular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=true; sortName ='popular'">Most Popular</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='notPopular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=false; sortName ='notPopular'">Least Popular</button>
           </div>
         </div>
 
@@ -102,7 +102,7 @@
             </form>
 
         </div>
-
+<div ng-click="filterMenu = false">
         <div class="froodBox" ng-class="{'froodBoxExtend':going}" ng-repeat="event in foodEvents | orderBy: sortingBy:reverse">
             <div ng-click="changeViewMode(event);" class="row" style="width:100%">
                 <div class="col-xs-4">
@@ -171,6 +171,7 @@
             </div>
 
         </div>
+      </div>
     </div>
 </body>
 </html>
