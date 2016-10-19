@@ -9,6 +9,12 @@ angular.module('SteroidsApplication', [
   dB.once("value", function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       $scope.foodEvents.push(childSnapshot.val());
+      if ($scope.foodEvents[$scope.foodEvents.length-1].start) {
+        $scope.foodEvents[$scope.foodEvents.length-1].start = new Date($scope.foodEvents[$scope.foodEvents.length-1].start);
+      }
+      if ($scope.foodEvents[$scope.foodEvents.length-1].end) {
+        $scope.foodEvents[$scope.foodEvents.length-1].end = new Date($scope.foodEvents[$scope.foodEvents.length-1].end);
+      }
       $scope.$apply();
     });
   });
@@ -17,8 +23,8 @@ angular.module('SteroidsApplication', [
   $scope.filterMenu = false;
   $scope.reverse = false;
   $scope.eventToAdd = {};
-  $scope.sortingBy = 'foodType';
-  $scope.sortName = 'foodType';
+  $scope.sortingBy = 'start';
+  $scope.sortName = 'soon';
 
   $scope.foodList = ["Pizza", "Chinese", "BBQ", "Sushi"];
 
@@ -63,10 +69,9 @@ angular.module('SteroidsApplication', [
     ev.icon = "images/" + ev.foodType.toLowerCase() + ".png";
     ev.start = ev.start.toString();
     ev.end = ev.end.toString();
-    ev.time = ev.start.slice(4, 10) + ", "+ ev.start.slice(16, 21) + " - " + ev.end.slice(4, 10) + ", " + ev.end.slice(16, 21);
-    delete ev.start;
-    delete ev.end;
     dB.push(ev);
+    ev.start = new Date(ev.start)
+    ev.end = new Date(ev.end)
     $scope.foodEvents.push(ev);
     $scope.successSubmit();
     $scope.eventToAdd = {};

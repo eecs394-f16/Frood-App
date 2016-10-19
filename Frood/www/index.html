@@ -51,8 +51,8 @@
 
         <div class="dropdown">
           <div ng-show="filterMenu" class="dropdown-content show">
-            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='soon'}" ng-click="sortingBy = 'time';filterMenu = false; reverse = false; sortName ='soon'">Time: Starting Soon</button>
-            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='later'}" ng-click="sortingBy = 'time';filterMenu = false; reverse = true; sortName = 'later'">Time: Starting Latest</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='soon'}" ng-click="sortingBy = 'start';filterMenu = false; reverse = false; sortName ='soon'">Time: Starting Soon</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='later'}" ng-click="sortingBy = 'start';filterMenu = false; reverse = true; sortName = 'later'">Time: Starting Latest</button>
             <button class="btn-info btn-dropdown" ng-class="{active: sortingBy=='foodType'}" ng-click="sortingBy = 'foodType';filterMenu = false; sortName='foodType'">Food Type</button>
             <button class="btn-info btn-dropdown" ng-class="{active: sortName=='popular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=true; sortName ='popular'">Most Popular</button>
             <button class="btn-info btn-dropdown" ng-class="{active: sortName=='notPopular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=false; sortName ='notPopular'">Least Popular</button>
@@ -120,7 +120,7 @@
                         <h3>{{event.loc}}</h3>
                     </div>
                     <div class="col-xs-12">
-                        <h3>{{event.time}}</h3>
+                        <h3>{{event.start | date: 'short'}}-{{event.end | date: 'shortTime'}}</h3>
                     </div>
 
                 </div>
