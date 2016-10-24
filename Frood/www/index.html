@@ -151,7 +151,7 @@
 
                         <div class="row" style="margin-top:20px">
                             <div class="col-xs-10">
-                                <button ng-click="going = !going; (going)?event.attending = event.attending + 1:event.attending = event.attending - 1; changeArrowColor(event)" ng-init="going = false">
+                                <button ng-click="going = !going; updateAttending(event, going); changeArrowColor(event)" ng-init="going = false">
                                     Change RSVP
                                 </button>
                             </div>

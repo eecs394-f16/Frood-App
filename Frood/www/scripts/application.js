@@ -44,6 +44,19 @@ angular.module('SteroidsApplication', [
     }
   }
 
+  $scope.updateAttending = function (ev, going) {
+      dB.child(ev.key).child("attending").once('value').then(function (snapshot) {
+          if (going) {
+              dB.child(ev.key).child("attending").set(snapshot.val() + 1);
+              ev.attending = ev.attending + 1;
+          } else {
+              dB.child(ev.key).child("attending").set(snapshot.val() - 1);
+              ev.attending = ev.attending - 1;
+          }
+          $scope.$apply();
+      });
+  }
+
   $scope.SucessWord = 'Thanks for submitting your Frood Event!';
   $scope.successSubmit = function() {
     alert($scope.SucessWord);
