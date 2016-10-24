@@ -37,29 +37,30 @@
 </head>
 <body ng-app="SteroidsApplication">
 
-    <div class="padding" ng-controller="IndexController">
+    <div class="padding froodBackground" ng-controller="IndexController">
 
         <super-navbar style="background-color: #8900db;">
-          <super-navbar-button ng-click="filterMenu = !filterMenu" side="left">
+          <super-navbar-button ng-click="filterMenu = !filterMenu;" side="left">
               <button class="dropbtn">Sort</button>
           </super-navbar-button>
             <super-navbar-title>
                 Frood
             </super-navbar-title>
-            <super-navbar-button ng-click="newEvent = true" side="right"><button>Add Event</button></super-navbar-button>
+            <super-navbar-button ng-click="newEvent = true; filterMenu = false" side="right"><button>Add Event</button></super-navbar-button>
         </super-navbar>
 
         <div class="dropdown">
+          <a href="#TOP">
           <div ng-show="filterMenu" class="dropdown-content show">
-            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='soon'}" ng-click="sortingBy = 'start';filterMenu = false; reverse = false; sortName ='soon'">Time: Starting Soon</button>
-            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='later'}" ng-click="sortingBy = 'start';filterMenu = false; reverse = true; sortName = 'later'">Time: Starting Latest</button>
-            <button class="btn-info btn-dropdown" ng-class="{active: sortingBy=='foodType'}" ng-click="sortingBy = 'foodType';filterMenu = false; sortName='foodType'">Food Type</button>
-            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='popular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=true; sortName ='popular'">Most Popular</button>
-            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='notPopular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=false; sortName ='notPopular'">Least Popular</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='soon'}" ng-click="sortingBy = 'start';filterMenu = false; reverse = false; sortName ='soon'; newEvent = false">Time: Starting Soon</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='later'}" ng-click="sortingBy = 'start';filterMenu = false; reverse = true; sortName = 'later'; newEvent = false">Time: Starting Latest</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortingBy=='foodType'}" ng-click="sortingBy = 'foodType';filterMenu = false; sortName='foodType'; newEvent = false">Food Type</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='popular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=true; sortName ='popular'; newEvent = false">Most Popular</button>
+            <button class="btn-info btn-dropdown" ng-class="{active: sortName=='notPopular'}" ng-click="sortingBy = 'attending';filterMenu = false; reverse=false; sortName ='notPopular'; newEvent = false">Least Popular</button>
           </div>
+        </a>
         </div>
-
-        <div class="froodBoxAdd" ng-show="newEvent">
+        <div class="froodBoxAdd" id="#TOP" ng-click="filterMenu = false" ng-show="newEvent">
 
             <form>
                 <div class="form-group">
