@@ -28,7 +28,7 @@ angular.module('SteroidsApplication', [
   $scope.sortingBy = 'start';
   $scope.sortName = 'soon';
 
-  $scope.foodList = ["Pizza", "Chinese", "BBQ", "Sushi"];
+  $scope.foodList = ["Pizza", "Chinese", "BBQ", "Sushi", "Breakfast", "Mexican", "Dessert", "Other"];
 
   $scope.openURL = function(url) {
     supersonic.app.openURL(url)
