@@ -7,8 +7,10 @@ angular.module('SteroidsApplication', [
   var dB = firebase.database().ref().child("events")
 
   dB.once("value", function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      $scope.foodEvents.push(childSnapshot.val());
+      snapshot.forEach(function (childSnapshot) {
+          var ev = childSnapshot.val();
+          ev.key = childSnapshot.key;
+      $scope.foodEvents.push(ev);
       if ($scope.foodEvents[$scope.foodEvents.length-1].start) {
         $scope.foodEvents[$scope.foodEvents.length-1].start = new Date($scope.foodEvents[$scope.foodEvents.length-1].start);
       }
