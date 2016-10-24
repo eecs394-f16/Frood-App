@@ -83,6 +83,11 @@ h3{
   margin: 0px auto;
   font-size:4vw;
 }
+h4{
+  padding: 0px;
+  margin: 0px auto;
+  font-size:3.5vw;
+}
 @media (max-device-width: 640px){
   h1{
     padding: 0px;
@@ -96,6 +101,11 @@ h3{
     font-size:4vw;
   }
   h3{
+    padding: 0px;
+    margin: 0px auto;
+    font-size:3.5vw;
+  }
+  h4{
     padding: 0px;
     margin: 0px auto;
     font-size:3.5vw;
